@@ -9,6 +9,17 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.4"
-  }
+    "express": "^4.18.1"
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sm4ck101/homework-11-note-taker.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Sm4ck101/homework-11-note-taker/issues"
+  },
+  "homepage": "https://github.com/Sm4ck101/homework-11-note-taker#readme"
 }
