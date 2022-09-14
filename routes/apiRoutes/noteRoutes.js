@@ -1,19 +1,19 @@
 const router = require("express").Router();
 const fs = require("fs");
 const { validateNote, findbyId, createNote } = require("../../lib/note");
-const notes = require("../../db/db.json");
+const data = require("../../db/db.json");
 
 router.get("/notes", (req, res) => {
-  let results = notes;
+  let results = data.notes;
   res.json(results);
 });
 
 router.post("/notes", (req, res) => {
-  req.body.id = notes.length.toString();
+  req.body.id = data.notes.length.toString();
   if (!validateNote(req.body)) {
     res.status(400).send("Error");
   } else {
-    const note = createNote(req.body, notes);
+    const note = createNote(req.body, data.notes);
     res.json(note);
   }
 });
